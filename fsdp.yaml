@@ -1,0 +1,27 @@
+compute_environment: LOCAL_MACHINE # 单机
+debug: false
+distributed_type: FSDP  # 策略
+downcast_bf16: "yes"  # 不把优化器状态等额外tensor再降到bf16（稳定性好，但多占显存）
+enable_cpu_affinity: false
+fsdp_config:
+  fsdp_activation_checkpointing: true  # 不启动激活checkpointing(激活在每个gpu完整1份，反向直接用)
+  fsdp_auto_wrap_policy: TRANSFORMER_BASED_WRAP # wrap策略：把模型里识别成Transformer block的模块进行切分(主要影响模型参数显存)
+  fsdp_backward_prefetch: BACKWARD_PRE  # 反向传播时，提前拉取下一个模块的 shard，用于加速多卡通信
+  fsdp_cpu_ram_efficient_loading: true # 加载 checkpoint 时用“RAM 友好”方式，把参数更高效地加载到 GPU
+  fsdp_forward_prefetch: false  # 针对前向
+  fsdp_offload_params: true  # true会大量权重在不用时会放在 CPU,但慢不少  false
+  fsdp_sharding_strategy: FULL_SHARD  # FSDP的切片策略：FULL_SHARD表示梯度、参数、优化器状态都切 shard，对参数显存最省，计算/通信开销最大   SHARD_GRAD_OP   FULL_SHARD    NO_SHARD
+  fsdp_state_dict_type: SHARDED_STATE_DICT # 这是保存 checkpoint 时的内存优化(避免单进程把所有权重堆在一起再保存)
+  fsdp_sync_module_states: true # 初始化时，各 rank 同步 module 的状态，保证权重一致
+  fsdp_use_orig_params: true
+machine_rank: 0
+main_training_function: main
+mixed_precision: bf16 # 混合精度(参数/激活用bf16)，已经打开
+num_machines: 1
+num_processes: 8
+rdzv_backend: static
+same_network: true
+tpu_env: []
+tpu_use_cluster: false
+tpu_use_sudo: false
+use_cpu: false

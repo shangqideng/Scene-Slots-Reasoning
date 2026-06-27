@@ -1,0 +1,132 @@
+[
+  {
+    "id": 1,
+    "object name": "chair",
+    "center": "x: 0.08, y: 0.30, z: 0.96",
+    "bounding box": {
+      "x_min ~ x_max": "-0.27 ~ 0.50",
+      "y_min ~ y_max": "0.09 ~ 0.50",
+      "z_min ~ z_max": "0.69 ~ 1.20"
+    }
+  },
+  {
+    "id": 2,
+    "object name": "chair",
+    "center": "x: 0.22, y: -0.13, z: 1.62",
+    "bounding box": {
+      "x_min ~ x_max": "-0.17 ~ 0.62",
+      "y_min ~ y_max": "-0.56 ~ 0.30",
+      "z_min ~ z_max": "0.95 ~ 2.05"
+    }
+  },
+  {
+    "id": 3,
+    "object name": "couch",
+    "center": "x: 0.08, y: 0.30, z: 0.96",
+    "bounding box": {
+      "x_min ~ x_max": "-0.27 ~ 0.50",
+      "y_min ~ y_max": "0.09 ~ 0.50",
+      "z_min ~ z_max": "0.69 ~ 1.19"
+    }
+  },
+  {
+    "id": 4,
+    "object name": "stool",
+    "center": "x: 0.59, y: 0.22, z: 1.32",
+    "bounding box": {
+      "x_min ~ x_max": "0.38 ~ 0.89",
+      "y_min ~ y_max": "0.08 ~ 0.53",
+      "z_min ~ z_max": "1.11 ~ 1.77"
+    }
+  },
+  {
+    "id": 5,
+    "object name": "rug",
+    "center": "x: 0.86, y: 0.38, z: 1.72",
+    "bounding box": {
+      "x_min ~ x_max": "0.39 ~ 1.31",
+      "y_min ~ y_max": "0.08 ~ 0.61",
+      "z_min ~ z_max": "1.07 ~ 2.17"
+    }
+  },
+  {
+    "id": 6,
+    "object name": "floor",
+    "center": "x: -0.63, y: 0.29, z: 1.75",
+    "bounding box": {
+      "x_min ~ x_max": "-1.31 ~ 0.20",
+      "y_min ~ y_max": "-0.16 ~ 0.63",
+      "z_min ~ z_max": "0.82 ~ 2.38"
+    }
+  },
+  {
+    "id": 7,
+    "object name": "door",
+    "center": "x: -0.92, y: -0.51, z: 2.04",
+    "bounding box": {
+      "x_min ~ x_max": "-1.32 ~ -0.55",
+      "y_min ~ y_max": "-0.95 ~ 0.01",
+      "z_min ~ z_max": "1.78 ~ 2.38"
+    }
+  },
+  {
+    "id": 8,
+    "object name": "drawer",
+    "center": "x: -0.28, y: -0.36, z: 2.06",
+    "bounding box": {
+      "x_min ~ x_max": "-0.50 ~ -0.05",
+      "y_min ~ y_max": "-0.75 ~ -0.03",
+      "z_min ~ z_max": "1.53 ~ 2.35"
+    }
+  },
+  {
+    "id": 9,
+    "object name": "table",
+    "center": "x: 0.59, y: 0.22, z: 1.32",
+    "bounding box": {
+      "x_min ~ x_max": "0.38 ~ 0.89",
+      "y_min ~ y_max": "0.08 ~ 0.53",
+      "z_min ~ z_max": "1.11 ~ 1.77"
+    }
+  },
+  {
+    "id": 10,
+    "object name": "remote control",
+    "center": "x: -0.13, y: 0.01, z: 2.12",
+    "bounding box": {
+      "x_min ~ x_max": "-0.26 ~ -0.00",
+      "y_min ~ y_max": "-0.04 ~ 0.06",
+      "z_min ~ z_max": "1.77 ~ 2.21"
+    }
+  },
+  {
+    "id": 11,
+    "object name": "pillow",
+    "center": "x: 0.15, y: -0.22, z: 1.65",
+    "bounding box": {
+      "x_min ~ x_max": "-0.09 ~ 0.37",
+      "y_min ~ y_max": "-0.41 ~ -0.07",
+      "z_min ~ z_max": "1.42 ~ 1.81"
+    }
+  },
+  {
+    "id": 12,
+    "object name": "water bottle",
+    "center": "x: -0.34, y: -0.70, z: 2.01",
+    "bounding box": {
+      "x_min ~ x_max": "-0.38 ~ -0.31",
+      "y_min ~ y_max": "-0.83 ~ -0.61",
+      "z_min ~ z_max": "1.97 ~ 2.19"
+    }
+  },
+  {
+    "id": 13,
+    "object name": "container",
+    "center": "x: -0.28, y: -0.37, z: 2.06",
+    "bounding box": {
+      "x_min ~ x_max": "-0.50 ~ -0.05",
+      "y_min ~ y_max": "-0.75 ~ -0.03",
+      "z_min ~ z_max": "1.53 ~ 2.35"
+    }
+  }
+]

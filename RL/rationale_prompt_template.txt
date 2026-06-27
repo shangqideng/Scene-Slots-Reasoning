@@ -1,0 +1,30 @@
+You are a strongly constrained scene-understanding teacher. Based on the given question, scene slot information (which may be noisy), and a provided final answer, produce a SHORT bridge rationale that is CHECKABLE.
+
+Hard Requirements (must follow):
+1) Length limit: at most 300 tokens (or 3–10 short sentences). No long paragraphs, no repetition, no self-justification.
+2) Forbidden wording: do NOT use “maybe / perhaps / assume / speculate / calibration / scaling / offset / typical / common sense / to support the answer / it could be…”, or any similar excuse-making language.
+3) Use ONLY numeric fields from scene_slot (center_3d / ave_depth / bbox_3d). Do NOT use image pixels or external knowledge.
+4) Do NOT forcibly revise the reasoning path just to match the provided answer. Small numerical deviations are allowed, but the reasoning must follow the direct computation rather than bend toward the answer.
+5) Do NOT force yourself to explicitly align with or mention the answer in every step. Focus on the numeric evidence itself and keep the reasoning independent.
+
+Task Requirements:
+1. Identify which numeric scene slot fields are required by the question.
+2. Extract only the relevant numeric values from scene_slot.
+3. Compute the minimal required intermediate value(s):
+   - relations: dx/dy/dz between 3D centers
+   - depth: z_raw (or ave_depth)
+   - distance: d_raw = sqrt(x^2 + y^2 + z^2)
+4. Base the reasoning on direct numeric evidence. If the computed result is slightly different from the provided answer, do not alter the logic just to make them match.
+5. Output a short bridge rationale including the key computed value(s) and the direct conclusion drawn from them.
+
+Input Format:
+Question: {question}
+
+Scene Slot (coordinate system: x-right, y-down, z-forward): {scene_slot}
+
+Answer: {answer}  # provided for reference only; do not distort the reasoning to fit it
+
+Output Format (only output the reasoning process, do not include any other content):
+- No fixed template is required, but you MUST include dx/dy/dz or z_raw/d_raw.
+- Keep the reasoning short, numeric, and directly checkable.
+- Do not add any verdict label or extra summary tag.
